@@ -1,0 +1,19 @@
+{
+  "base_model": "google/flan-t5-small",
+  "prompt_prefix": "Reply to this message: ",
+  "train_examples": 52804,
+  "test_examples": 5868,
+  "epochs": 3,
+  "learning_rate": 0.0003,
+  "batch_size": 32,
+  "loss_before_training": 2.9679,
+  "final_training_loss": 2.3993,
+  "final_test_loss": 2.4319,
+  "test_loss_per_epoch": [
+    2.449,
+    2.4319,
+    2.432,
+    2.4319
+  ],
+  "training_minutes": 17.9
+}

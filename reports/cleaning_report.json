@@ -1,0 +1,8 @@
+{
+  "raw_pairs": 76052,
+  "clean_pairs": 58672,
+  "empty_pairs_removed": 0,
+  "long_pairs_removed": 9680,
+  "duplicate_pairs_removed": 7700,
+  "max_words": 25
+}
