@@ -41,6 +41,11 @@ SYSTEM_PROMPT = (
     "Use Markdown (lists, bold text, code blocks) when it makes the answer easier to read."
 )
 
+# ---------- Dataset answers (checked first) ----------
+DATASET_FILE = PROJECT_DIR / "data" / "processed" / "dialogue_cleaned.jsonl"
+# How similar a message must be to a dataset question (0 to 1) to answer from the dataset.
+DATASET_MIN_SCORE = float(os.getenv("DATASET_MIN_SCORE", "0.80"))
+
 # ---------- Local trained model (backup brain) ----------
 LOCAL_MODEL_DIR = Path(
     os.getenv("LOCAL_MODEL_DIR", PROJECT_DIR / "models" / "minichatgpt-model")
