@@ -12,11 +12,13 @@ A ChatGPT-style chatbot built only with **free tools**.
 User message
     │
     ▼
-ChatRouter ──► Gemini (main model) ──► answer   🌐
-    │   busy / too slow
-    ├────────► Gemini (backup model) ──► answer  🌐
-    │   still failing
-    └────────► My trained model ──► answer       🧠
+1. Dataset search (TF-IDF + cosine similarity, 46k clean pairs)
+    │  similarity ≥ 0.80 → answer from my dataset (instant)
+    ▼
+2. Gemini API (main + backup model, retry, 15 s time limit)
+    │  fails
+    ▼
+3. My fine-tuned flan-t5 model (offline backup)
 ```
 
 ## Features
