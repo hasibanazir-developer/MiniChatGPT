@@ -1,5 +1,13 @@
-gradio
-python-dotenv
-google-genai
-transformers
+# Data (phase 1-2)
+datasets>=4.0
+
+# Chatbot brain + screen
+gradio>=6.0,<7.0
+google-genai>=1.0
+python-dotenv>=1.0
+scikit-learn
+
+# My trained model (backup brain)
 torch
+transformers>=4.40
+sentencepiece
